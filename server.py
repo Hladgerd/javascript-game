@@ -1,19 +1,25 @@
 from flask import Flask, render_template, request, redirect, url_for, session
+import secret_key
 
 app = Flask(__name__)
+app.secret_key = secret_key.key
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def intro_screen():
+    if request.method == 'POST':
+        crush = request.form.get('crush')
+        session['crush'] = crush
+        return render_template('flower.html')
     return render_template('index.html')
 
 
-@app.route('/')
+@app.route('/flower')
 def flower_screen():
-    pass
+    return render_template('flower.html')
 
 
-@app.route('/')
+@app.route('/booster')
 def booster_screen():
     pass
 
