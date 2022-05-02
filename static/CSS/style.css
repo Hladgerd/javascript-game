@@ -1,0 +1,14 @@
+svg {
+    overflow: visible;
+    margin: 5px;
+}
+
+path {
+    fill: red;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.petal {
+    fill: yellow;
+}
