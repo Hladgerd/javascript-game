@@ -160,10 +160,22 @@ function deletePetal (){
        petal.addEventListener('click', () => {
            if (FLOWERSVG.children.length > 2){
                petal.parentElement.remove();
+               changeLoveText();
            }
 
     });
         }
+}
+
+function changeLoveText() {
+    const lovesYouText = document.querySelector('.loves-you-text');
+    let lovesYou = 'LOVES YOU';
+    let lovesYouNot = 'LOVES YOU NOT';
+    if (FLOWERSVG.children.length % 2 === 0) {
+        lovesYouText.textContent = lovesYou;
+    }else {
+        lovesYouText.textContent = lovesYouNot;
+    }
 }
 
 function initGame() {
