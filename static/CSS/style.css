@@ -38,14 +38,19 @@ body {
     margin: 8px 0;
 }
 
-#heart:hover {
+.heart:hover {
   transform: scale(1.2);
 }
 
-#heart {
+.heart {
     margin-top: 5%;
     transition: all 1s;
     transform-origin: 50% 50%;
+}
+
+#restart-heart {
+    position: absolute;
+    left: 0;
 }
 
 svg {
