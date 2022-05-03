@@ -14,8 +14,11 @@ def intro_screen():
     return render_template('index.html')
 
 
-@app.route('/flower')
+@app.route('/flower', methods=['GET', 'POST'])
 def flower_screen():
+    if request.method == 'POST':
+        session.pop('crush')
+        return redirect('/')
     return render_template('flower.html')
 
 
