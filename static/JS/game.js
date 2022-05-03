@@ -1,3 +1,5 @@
+const FLOWERSVG = document.querySelector('#flower');
+
 let allPetals = [
     `<path d="M 200,100
                 c 100,50 150,50 200,0
@@ -143,11 +145,10 @@ function selectRandomPetals(min, max) {
 }
 
 function placePetals () {
-    const flowerSvg = document.querySelector('#flower');
     let selectedPetals = selectRandomPetals(20, 32);
     for (let petal of selectedPetals) {
         let petalContainer = document.createElementNS("http://www.w3.org/2000/svg",'g');
-        flowerSvg.appendChild(petalContainer);
+        FLOWERSVG.appendChild(petalContainer);
         petalContainer.innerHTML = petal;
     }
 }
@@ -157,7 +158,10 @@ function deletePetal (){
 
     for (let petal of petals) {
        petal.addEventListener('click', () => {
-           petal.remove();
+           if (FLOWERSVG.children.length > 2){
+               petal.parentElement.remove();
+           }
+
     });
         }
 }
