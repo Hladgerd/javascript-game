@@ -10,7 +10,7 @@ def intro_screen():
     if request.method == 'POST':
         crush = request.form.get('crush')
         session['crush'] = crush
-        return render_template('flower.html')
+        return render_template('flower.html', crush=crush)
     return render_template('index.html')
 
 
