@@ -4,11 +4,21 @@
 
 {% block content %}
 
-    <h1>Who is your crush?</h1>
+    <h1 id="main-header">Who is your crush?</h1>
     <form action="{{ url_for('intro_screen') }}" method="post">
-        <input type="text" name="crush">
-        <button type="submit">Save</button>
+        <input type="text" name="crush" id="crush-input" placeholder="your loved one's name...">
+        <label>
+            <input type="submit" name="submit-button" id="submit-button">
+            <svg id="heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" stroke="red"
+                d="M 10,30
+                A 20,20 0,0,1 50,30
+                A 20,20 0,0,1 90,30
+                Q 90,60 50,90
+                Q 10,60 10,30 z
+                " />
+            </svg>
+        </label>
     </form>
-{#    <a href="{{ url_for('flower_screen') }}">Flower</a>#}
 
 {% endblock %}
