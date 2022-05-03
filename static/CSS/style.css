@@ -16,13 +16,17 @@ body {
     align-items: center;
 }
 
-circle {
-    }
+.flower-container {
+    display: block;
+    margin: 15%;
+}
 
 #submit-button {
     display: none;
 }
+
 #main-header {
+    text-align: center;
     margin-top: 10rem;
     font-size: 300%
 
@@ -34,7 +38,15 @@ circle {
     margin: 8px 0;
 }
 
+#heart:hover {
+  transform: scale(1.2);
+}
 
+#heart {
+    margin-top: 5%;
+    transition: all 1s;
+    transform-origin: 50% 50%;
+}
 
 svg {
     overflow: visible;
