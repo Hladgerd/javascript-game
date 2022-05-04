@@ -3,9 +3,9 @@
 {% block page_title %}Loves or not?{% endblock %}
 
  {% block content %}
-     <h1 class="main-header"> {{ crush }} </h1>
+     <h1 class="main-header">{{ crush }}</h1>
      <div id="love-booster-btn">
-         <a href="{{ url_for('booster_screen') }}"><img src="static/love_booster.gif"></a>
+         <a href="{{ url_for('booster_screen') }}"><img src="/static/IMAGES/love_booster.gif" alt="Love booster button"></a>
      </div>
      <span id="hover-booster">Love Booster</span>
      <h1 class="loves-you-text">LOVES YOU</h1>
@@ -22,9 +22,7 @@
          </svg>
      </div>
      <div id="restart-icon">
-         <a href="{{ url_for('intro_screen') }}"><img src="static/restart.png"></a>
+         <a href="{{ url_for('restart_game') }}"><img src="/static/IMAGES/restart.png" alt="Restart button"></a>
      </div>
          <span id="hover-restart">Restart</span>
-
-
  {% endblock %}
