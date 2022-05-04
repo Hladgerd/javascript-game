@@ -3,7 +3,6 @@
 {% block page_title %}Crush{% endblock %}
 
  {% block content %}
-
      <h1 class="main-header">Who is your crush?</h1>
      <form action="{{ url_for('intro_screen') }}" method="post">
          <input type="text" name="crush" id="crush-input" placeholder="Your loved one's name...">
@@ -32,9 +31,4 @@
             </svg>
         </label>
     </form>
-     <audio id="myAudio">
-      <source src="/static/AUDIO/The-Contours-Do-You-Love-Me.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-     <button type="button" onclick="playAudio()">Play</button>
 {% endblock %}
