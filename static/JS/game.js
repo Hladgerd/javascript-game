@@ -144,7 +144,7 @@ function selectRandomPetals(min, max) {
     return shuffledPetals.slice(0, randomNumber);
 }
 
-function placePetals () {
+function placePetals() {
     let selectedPetals = selectRandomPetals(20, 32);
     for (let petal of selectedPetals) {
         let petalContainer = document.createElementNS("http://www.w3.org/2000/svg",'g');
@@ -153,16 +153,15 @@ function placePetals () {
     }
 }
 
-function deletePetal (){
+function deletePetal() {
     const petals = document.querySelectorAll('.petal');
 
     for (let petal of petals) {
        petal.addEventListener('click', () => {
-           if (FLOWERSVG.children.length > 2){
+           if (FLOWERSVG.children.length > 3){
                petal.parentElement.remove();
                changeLoveText();
            }
-
     });
         }
 }
@@ -178,9 +177,21 @@ function changeLoveText() {
     }
 }
 
+/*function playSound(source) {
+    let audio = new Audio(source);
+    audio.play();
+}
+
+function playSoundOnSubmit() {
+    const submitForm = document.querySelector('form');
+    submitForm.addEventListener('submit', playSound('static/AUDIO/The-Contours-Do-You-Love-Me.mp3'));
+}*/
+
 function initGame() {
+    // playSoundOnSubmit();
     placePetals();
     deletePetal();
+
 }
 
 initGame();
