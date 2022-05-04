@@ -11,6 +11,7 @@ body {
     min-width: 400px;
     background: linear-gradient(floralwhite 30%, plum);
     font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
+    font-weight: bold;
 }
 
 .container {
@@ -34,10 +35,18 @@ body {
     font: bold xx-small 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
 }
 
-#main-header {
+.main-header {
     text-align: center;
-    margin-top: 3rem;
-    font-size: 400%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 350%;
+}
+
+.loves-you-text {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 250%;
 }
 
 #crush-input {
@@ -55,13 +64,6 @@ body {
     margin-top: 5%;
     transition: all 1s;
     transform-origin: 50% 50%;
-}
-
-#restart-icon {
-    position: absolute;
-    left: 2%;
-    bottom: 8%;
-    transform: scale(1.6);
 }
 
 #submit-heart {
@@ -103,8 +105,7 @@ svg {
     transition: opacity 1s ease-in-out;
     position: absolute;
     top: 29%;
-    margin-left: 2em
-;
+    margin-left: 2em;
 }
 
 .hover-text:hover:before {
@@ -113,34 +114,59 @@ svg {
 
 }
 
-.hover-text-restart {
-  position: relative;
+
+#restart-icon {
+    position: absolute;
+    left: 2%;
+    bottom: 8%;
+    transform: scale(1.6);
 }
 
-.hover-text-restart:before {
-    content: attr(data-hover-restart);
+#restart-icon:hover ~ #hover-restart {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+#hover-restart {
+    position: absolute;
+    color: #655f5f;
+    left: 2%;
+    bottom: 19%;
     visibility: hidden;
     opacity: 0;
-    width: 140px;
-    color: #efa6a6;
-    text-align: center;
-    padding: 5px 0;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-    top: 29%;
-    margin-left: 2em
-;
+    transition: opacity 1s ease-in-out
+
 }
 
-.hover-text-restart:hover:before {
-  opacity: 1;
-  visibility: visible;
-}
 
 #love-booster-btn {
     position: absolute;
-    right: 0.5%;
+    right: 2%;
+    top: 10%;
+
+}
+
+#love-booster-btn img {
+    position: relative;
     width: 120px;
     height: auto;
-    border-radius: 100%;
 }
+
+#love-booster-btn:hover ~ #hover-booster {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+#hover-booster {
+    position: absolute;
+    color: #655f5f;
+    right: 2.5%;
+    top: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-in-out
+
+}
+
