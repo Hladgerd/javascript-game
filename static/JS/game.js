@@ -160,8 +160,10 @@ function deletePetal() {
            if (FLOWERSVG.children.length > 3){
                petal.parentElement.remove();
                changeLoveText();
-               if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT'){
-                   heartRainfall();
+               if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU'){
+                   heartRainfall('heart-icon');
+               } else if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT') {
+                  heartRainfall('broken-heart-icon');
                }
            }
 
@@ -180,10 +182,11 @@ function changeLoveText() {
     }
 }
 
-function heartRainfall () {
+function heartRainfall (cl) {
     document.addEventListener('mousemove', function (e){
         let body = document.querySelector('body');
         let heart = document.createElement('span');
+        heart.classList.add(cl)
         let x = e.offsetX;
         let y = e.offsetY;
         heart.style.left = x+'px';
