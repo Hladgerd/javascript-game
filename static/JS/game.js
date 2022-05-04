@@ -167,13 +167,6 @@ function deletePetal() {
 
     });
     }
-    // console.log(FLOWERSVG.children);
-    // console.log(FLOWERSVG.children.length);
-   // if (document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT' && l === 3) {
-   //     heartRainfall();
-   // } else {
-   //     // heartRainfall();
-   // }
 }
 
 function changeLoveText() {
@@ -196,10 +189,8 @@ function heartRainfall () {
         heart.style.left = x+'px';
         heart.style.top = y+'px';
         let size = Math.random() * 100;
-        heart.style.width = 20+size+'px';
-        heart.style.height = 20+size+'px';
-        heart.innerHTML = '<3';
-        heart.style.position = 'absolute';
+        heart.style.width = 45+size+'px';
+        heart.style.height = 25+size+'px';
         body.appendChild(heart);
 
         setTimeout(function (){
