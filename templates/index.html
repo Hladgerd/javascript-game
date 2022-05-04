@@ -6,17 +6,28 @@
 
     <h1 id="main-header">Who is your crush?</h1>
     <form action="{{ url_for('intro_screen') }}" method="post">
-        <input type="text" name="crush" id="crush-input" placeholder="your loved one's name...">
+        <input type="text" name="crush" id="crush-input" placeholder="Your loved one's name...">
         <label>
             <input type="submit" name="submit-button" id="submit-button">
             <svg class="heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path
-                d="M 10,30
-                A 20,20 0,0,1 50,30
-                A 20,20 0,0,1 90,30
-                Q 90,60 50,90
-                Q 10,60 10,30 z
-                " />
+                <defs>
+                  <radialGradient id="RadialGradient" cx="0.25" cy="0.25" r="0.25">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop offset="100%" stop-color="red"></stop>
+                  </radialGradient>
+                </defs>
+                <path d="M 10,30
+                        A 20,20 0,0,1 50,30
+                        A 20,20 0,0,1 90,30
+                        Q 90,60 50,90
+                        Q 10,60 10,30 z"
+                        fill="url(#RadialGradient)">
+                </path>
+                <text>
+                    <tspan x="55" y="40" class="submit-text">Do you</tspan>
+                    <tspan x="55" y="55" class="submit-text">love</tspan>
+                    <tspan x="50" y="70" class="submit-text">me?</tspan>
+                </text>
             </svg>
         </label>
     </form>
