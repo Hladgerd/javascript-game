@@ -173,7 +173,7 @@ function changeLoveText() {
     const lovesYouText = document.querySelector('.loves-you-text');
     let lovesYou = 'LOVES YOU';
     let lovesYouNot = 'LOVES YOU NOT';
-    if (FLOWERSVG.children.length % 2 === 0) {
+    if (lovesYouText.textContent === lovesYouNot) {
         lovesYouText.textContent = lovesYou;
     }else {
         lovesYouText.textContent = lovesYouNot;
