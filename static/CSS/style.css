@@ -63,8 +63,8 @@ body {
     bottom: 8%;
 }
 
-#restart-heart {
-    fill: red;
+#submit-heart {
+    fill: url(#Gradient-heart);
 }
 
 svg {
@@ -87,7 +87,6 @@ svg {
 
 .hover-text {
   position: relative;
-  border-bottom: 1px dotted black;
 }
 
 .hover-text:before {
@@ -97,10 +96,8 @@ svg {
     width: 140px;
     color: #efa6a6;
     text-align: center;
-    border-radius: 5px;
     padding: 5px 0;
     transition: opacity 1s ease-in-out;
-
     position: absolute;
     top: 29%;
     margin-left: 2em
