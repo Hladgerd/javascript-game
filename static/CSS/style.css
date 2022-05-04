@@ -57,10 +57,11 @@ body {
     transform-origin: 50% 50%;
 }
 
-#restart-svg {
+#restart-icon {
     position: absolute;
     left: 2%;
     bottom: 8%;
+    transform: scale(1.6);
 }
 
 #submit-heart {
@@ -107,9 +108,37 @@ svg {
 .hover-text:hover:before {
   opacity: 1;
   visibility: visible;
+
+}
+
+.hover-text-restart {
+  position: relative;
+}
+
+.hover-text-restart:before {
+    content: attr(data-hover-restart);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    color: #efa6a6;
+    text-align: center;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 29%;
+    margin-left: 2em
+;
+}
+
+.hover-text-restart:hover:before {
+  opacity: 1;
+  visibility: visible;
 }
 
 #love-booster-btn {
     position: absolute;
-    right: 0;
+    right: 0.5%;
+    width: 120px;
+    height: auto;
+    border-radius: 100%;
 }
