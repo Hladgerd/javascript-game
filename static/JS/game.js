@@ -1,4 +1,8 @@
-const FLOWERSVG = document.querySelector('#flower');
+const FLOWER_SVG = document.querySelector('#flower');
+const LOVES_YOU_TEXT = document.querySelector('.loves-you-text');
+const LOVES_YOU = 'LOVES YOU';
+const LOVES_YOU_NOT = 'LOVES YOU NOT';
+const LAST_PETAL = 3;
 
 let allPetals = [
     `<path d="M 200,100
@@ -145,10 +149,10 @@ function selectRandomPetals(min, max) {
 }
 
 function placePetals() {
-    let selectedPetals = selectRandomPetals(3, 4);
+    let selectedPetals = selectRandomPetals(20, 32);
     for (let petal of selectedPetals) {
         let petalContainer = document.createElementNS("http://www.w3.org/2000/svg",'g');
-        FLOWERSVG.appendChild(petalContainer);
+        FLOWER_SVG.appendChild(petalContainer);
         petalContainer.innerHTML = petal;
     }
 }
@@ -157,15 +161,17 @@ function deletePetal() {
     const petals = document.querySelectorAll('.petal');
     for (let petal of petals) {
        petal.addEventListener('click', () => {
-           if (FLOWERSVG.children.length > 3){
+           if (FLOWER_SVG.children.length > LAST_PETAL){
                petal.parentElement.remove();
                changeLoveText();
-               if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU'){
-                   heartRainfall('heart-icon');
+               if (FLOWER_SVG.children.length === LAST_PETAL) {
                    hideLoveBoosterIcon();
-               } else if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT') {
-                  heartRainfall('broken-heart-icon');
-                  hideLoveBoosterIcon();
+                   if (LOVES_YOU_TEXT.textContent === LOVES_YOU) {
+                       heartRainfall('heart-icon');
+                   }
+                   else if (LOVES_YOU_TEXT.textContent === LOVES_YOU_NOT) {
+                       heartRainfall('broken-heart-icon');
+                   }
                }
            }
 
@@ -174,13 +180,10 @@ function deletePetal() {
 }
 
 function changeLoveText() {
-    const lovesYouText = document.querySelector('.loves-you-text');
-    let lovesYou = 'LOVES YOU';
-    let lovesYouNot = 'LOVES YOU NOT';
-    if (lovesYouText.textContent === lovesYouNot) {
-        lovesYouText.textContent = lovesYou;
+    if (LOVES_YOU_TEXT.textContent === LOVES_YOU_NOT) {
+        LOVES_YOU_TEXT.textContent = LOVES_YOU;
     }else {
-        lovesYouText.textContent = lovesYouNot;
+        LOVES_YOU_TEXT.textContent = LOVES_YOU_NOT;
     }
 }
 
@@ -208,26 +211,10 @@ function hideLoveBoosterIcon () {
     let icon = document.getElementById('love-booster-btn');
     icon.style.display = 'none';
 }
-/*function playSound(source) {
-    let audio = new Audio(source);
-    audio.play();
-}
-
-function playSoundOnSubmit() {
-    const submitForm = document.querySelector('form');
-    submitForm.addEventListener('submit', playSound('static/AUDIO/The-Contours-Do-You-Love-Me.mp3'));
-}*/
-
-let x = document.getElementById("myAudio");
-function playAudio() {
-  x.play();
-
 
 function initGame() {
-    // playSoundOnSubmit();
     placePetals();
     deletePetal();
-
 }
 
 initGame();
