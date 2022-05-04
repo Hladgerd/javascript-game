@@ -218,6 +218,11 @@ function playSoundOnSubmit() {
     submitForm.addEventListener('submit', playSound('static/AUDIO/The-Contours-Do-You-Love-Me.mp3'));
 }*/
 
+let x = document.getElementById("myAudio");
+function playAudio() {
+  x.play();
+
+
 function initGame() {
     // playSoundOnSubmit();
     placePetals();
