@@ -24,7 +24,7 @@ def flower_screen():
 
 @app.route('/booster')
 def booster_screen():
-    pass
+    return render_template('booster.html')
 
 
 if __name__ == "__main__":

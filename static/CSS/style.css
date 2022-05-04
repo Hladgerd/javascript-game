@@ -111,3 +111,8 @@ svg {
   opacity: 1;
   visibility: visible;
 }
+
+#love-booster-btn {
+    position: absolute;
+    right: 0;
+}
