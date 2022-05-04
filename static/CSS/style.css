@@ -84,3 +84,30 @@ svg {
 #flower-center {
     fill: black;
 }
+
+.hover-text {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hover-text:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    color: #efa6a6;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+
+    position: absolute;
+    top: 29%;
+    margin-left: 2em
+;
+}
+
+.hover-text:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
