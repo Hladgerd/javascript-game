@@ -2,11 +2,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 body {
     min-width: 400px;
-    background-color: plum;
+    background: linear-gradient(floralwhite 30%, plum);
     font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
-
 }
 
 .container {
@@ -25,17 +29,22 @@ body {
     display: none;
 }
 
+.submit-text {
+    text-anchor: middle;
+    font: bold xx-small 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
+}
+
 #main-header {
     text-align: center;
-    margin-top: 10rem;
-    font-size: 300%
-
+    margin-top: 3rem;
+    font-size: 400%;
 }
 
 #crush-input {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 3rem 0;
+    font-size: 150%;
 }
 
 .heart:hover {
@@ -48,9 +57,14 @@ body {
     transform-origin: 50% 50%;
 }
 
-#restart-heart {
+#restart-svg {
     position: absolute;
-    left: 0;
+    left: 2%;
+    bottom: 8%;
+}
+
+#restart-heart {
+    fill: red;
 }
 
 svg {
@@ -58,12 +72,15 @@ svg {
     margin: 5px;
 }
 
-path {
-    fill: red;
-    stroke: black;
-    stroke-width: 2px;
+.petal {
+    fill: url(#Gradient-petal);
+    stroke: yellowgreen;
 }
 
-.petal {
-    fill: yellow;
+.stop1 { stop-color: red; }
+.stop2 { stop-color: darkred;}
+.stop3 { stop-color: palevioletred; }
+
+#flower-center {
+    fill: black;
 }
