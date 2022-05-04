@@ -145,7 +145,7 @@ function selectRandomPetals(min, max) {
 }
 
 function placePetals() {
-    let selectedPetals = selectRandomPetals(20, 32);
+    let selectedPetals = selectRandomPetals(3, 4);
     for (let petal of selectedPetals) {
         let petalContainer = document.createElementNS("http://www.w3.org/2000/svg",'g');
         FLOWERSVG.appendChild(petalContainer);
@@ -155,15 +155,25 @@ function placePetals() {
 
 function deletePetal() {
     const petals = document.querySelectorAll('.petal');
-
     for (let petal of petals) {
        petal.addEventListener('click', () => {
            if (FLOWERSVG.children.length > 3){
                petal.parentElement.remove();
                changeLoveText();
+               if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT'){
+                   heartRainfall();
+               }
            }
+
     });
-        }
+    }
+    // console.log(FLOWERSVG.children);
+    // console.log(FLOWERSVG.children.length);
+   // if (document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT' && l === 3) {
+   //     heartRainfall();
+   // } else {
+   //     // heartRainfall();
+   // }
 }
 
 function changeLoveText() {
@@ -175,6 +185,27 @@ function changeLoveText() {
     }else {
         lovesYouText.textContent = lovesYouNot;
     }
+}
+
+function heartRainfall () {
+    document.addEventListener('mousemove', function (e){
+        let body = document.querySelector('body');
+        let heart = document.createElement('span');
+        let x = e.offsetX;
+        let y = e.offsetY;
+        heart.style.left = x+'px';
+        heart.style.top = y+'px';
+        let size = Math.random() * 100;
+        heart.style.width = 20+size+'px';
+        heart.style.height = 20+size+'px';
+        heart.innerHTML = '<3';
+        heart.style.position = 'absolute';
+        body.appendChild(heart);
+
+        setTimeout(function (){
+            heart.remove();
+        },2000);
+    })
 }
 
 /*function playSound(source) {
