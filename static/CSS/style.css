@@ -159,7 +159,7 @@ svg {
 
  .heart-icon {
      position: absolute;
-     background: url("/static/heart.png");
+     background: url("/static/IMAGES/heart.png");
      pointer-events: none;
      transform: translate(-50%, -50%);
      width: 100%;
@@ -169,7 +169,7 @@ svg {
  }
   .broken-heart-icon {
      position: absolute;
-     background: url("/static/broken_heart.png");
+     background: url("/static/IMAGES/broken_heart.png");
      pointer-events: none;
      transform: translate(-50%, -50%);
      width: 100%;
@@ -190,5 +190,4 @@ svg {
         opacity: 0;
         filter: hue-rotate(720deg);
     }
-
 }
