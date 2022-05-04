@@ -2,12 +2,12 @@
 
 {% block page_title %}Crush{% endblock %}
 
-{% block content %}
+ {% block content %}
 
-    <h1 id="main-header">Who is your crush?</h1>
-    <form action="{{ url_for('intro_screen') }}" method="post">
-        <input type="text" name="crush" id="crush-input" placeholder="Your loved one's name...">
-        <label>
+     <h1 class="main-header">Who is your crush?</h1>
+     <form action="{{ url_for('intro_screen') }}" method="post">
+         <input type="text" name="crush" id="crush-input" placeholder="Your loved one's name...">
+         <label>
             <input type="submit" name="submit-button" id="submit-button">
             <svg class="heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -32,5 +32,4 @@
             </svg>
         </label>
     </form>
-
 {% endblock %}
