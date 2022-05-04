@@ -162,8 +162,10 @@ function deletePetal() {
                changeLoveText();
                if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU'){
                    heartRainfall('heart-icon');
+                   hideLoveBoosterIcon();
                } else if (FLOWERSVG.children.length === 3 && document.querySelector('.loves-you-text').textContent === 'LOVES YOU NOT') {
                   heartRainfall('broken-heart-icon');
+                  hideLoveBoosterIcon();
                }
            }
 
@@ -202,6 +204,10 @@ function heartRainfall (cl) {
     })
 }
 
+function hideLoveBoosterIcon () {
+    let icon = document.getElementById('love-booster-btn');
+    icon.style.display = 'none';
+}
 /*function playSound(source) {
     let audio = new Audio(source);
     audio.play();
