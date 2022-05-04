@@ -4,7 +4,10 @@
 
 {% block content %}
     <h1 class="main-header"> {{ crush }} </h1>
-    <a href="{{ url_for('booster_screen') }}"><img src="static/love-fire-zH2FI0Xo-unscreen.gif" id="love-booster-btn"></a>
+    <div id="love-booster-btn">
+        <a href="{{ url_for('booster_screen') }}"><img src="static/love-fire-zH2FI0Xo-unscreen.gif"></a>
+    </div>
+    <span id="hover-booster">Love Booster</span>
     <h1 class="loves-you-text">LOVES YOU???</h1>
     <div class="flower-container hover-text"  data-hover="Click the petals to find out!">
         <svg width="200" height="200" id="flower">
@@ -18,10 +21,10 @@
             <circle r="100" cx="100" cy="100" id="flower-center"></circle>
         </svg>
     </div>
-    <a href="{{ url_for('intro_screen') }}"><img src="static/icons8-restart-love-64-removebg-preview.png"
-                                                 class="hover-text-restart" id="restart-icon" data-hover-restart="Restart">
-    </a>
-
+    <div id="restart-icon">
+        <a href="{{ url_for('intro_screen') }}"><img src="static/icons8-restart-love-64-removebg-preview.png"></a>
+    </div>
+        <span id="hover-restart">Restart</span>
 
 
 {% endblock %}
