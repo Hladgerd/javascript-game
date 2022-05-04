@@ -66,6 +66,8 @@ body {
 
 #submit-heart {
     fill: url(#Gradient-heart);
+    stroke: #9C1A1C;
+    filter: drop-shadow(-3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 svg {
