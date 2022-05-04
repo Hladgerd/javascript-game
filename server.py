@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, session
 import secret_key
 
 app = Flask(__name__)
@@ -14,17 +14,20 @@ def intro_screen():
     return render_template('index.html')
 
 
-@app.route('/flower', methods=['GET', 'POST'])
+@app.route('/flower')
 def flower_screen():
-    if request.method == 'POST':
-        session.pop('crush')
-        return redirect('/')
     return render_template('flower.html')
 
 
 @app.route('/booster')
 def booster_screen():
     return render_template('booster.html')
+
+
+@app.route('/restart')
+def restart_game():
+    session.pop('crush')
+    return redirect('/')
 
 
 if __name__ == "__main__":
