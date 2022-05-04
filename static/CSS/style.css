@@ -71,12 +71,15 @@ svg {
 .petal {
     fill: url(#Gradient-petal);
     stroke: yellowgreen;
+    filter: drop-shadow(-5px 5px 2px rgb(0 0 0 / 0.4));
 }
 .stop1 { stop-color: red; }
 .stop2 { stop-color: darkred;}
 .stop3 { stop-color: palevioletred; }
+
 #flower-center {
     fill: black;
+    filter: drop-shadow(-5px 5px 2px rgb(0 0 0 / 0.4));
 }
 .hover-text {
   position: relative;
