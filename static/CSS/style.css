@@ -84,3 +84,7 @@ svg {
 #flower-center {
     fill: black;
 }
+#love-booster-btn {
+    position: absolute;
+    right: 0;
+}
