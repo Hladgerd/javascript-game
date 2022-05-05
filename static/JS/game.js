@@ -170,7 +170,7 @@ function deletePetal() {
                    }
                    else if (LOVES_YOU_TEXT.textContent === LOVES_YOU_NOT) {
                        heartRainfall('broken-heart-icon');
-                       playAudio('/static/AUDIO/Hello_darkness.mp3');
+                       playAudio('/static/AUDIO/The_Sound_of_Silence.mp3');
                    }
                }
            }
@@ -187,7 +187,6 @@ function changeLoveText() {
     }
 }
 
-
 function hideLoveBoosterIcon() {
     let icon = document.getElementById('love-booster-btn');
     icon.style.display = 'none';
@@ -197,7 +196,7 @@ function initGame() {
     if (document.querySelector('#flower')) {
         placePetals();
         deletePetal();
-    }else if(document.querySelector('#Slots')){
+    } else if (document.querySelector('#Slots')){
         initSlotMachine();
     }
 }
