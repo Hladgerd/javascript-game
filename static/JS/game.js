@@ -225,7 +225,7 @@ function initGame() {
     if (document.querySelector('#flower')) {
         placePetals();
         deletePetal();
-    }else if(document.querySelector('#spin-button')){
+    }else if(document.querySelector('#Slots')){
         initSlotMachine();
     }
 }
