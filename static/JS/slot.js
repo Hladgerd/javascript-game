@@ -2,18 +2,23 @@ import { heartRainfall } from "./util.js";
 import { getRandomIntInclusive } from "./util.js";
 import { playAudio } from "./util.js";
 
-let status = document.querySelector('#status');
+const STATUS = document.querySelector('#status');
+const WIN_TEXT = "TOTALLY LOVES YOU!!!";
+const LOOSE_TEXT = "IS NOT INTO YOU!";
+const SPIN_TEXT = "ANALYZING...";
+
+
 export function initSlotMachine() {
 	const spinButton = document.querySelector('#spin-button');
 	spinButton.addEventListener('click', spinCards);
 }
 
 function spinCards() {
-	status.textContent = "SPINNING";
+	STATUS.textContent = SPIN_TEXT;
 
-	let maxSpinSlot1 = getRandomIntInclusive(10, 15);
-	let maxSpinSlot2 = getRandomIntInclusive(16, 20);
-	let maxSpinSlot3 = getRandomIntInclusive(21, 25);
+	const maxSpinSlot1 = getRandomIntInclusive(10, 15);
+	const maxSpinSlot2 = getRandomIntInclusive(16, 20);
+	const maxSpinSlot3 = getRandomIntInclusive(21, 25);
 
 	let round = 0;
 
@@ -23,20 +28,20 @@ function spinCards() {
 
 	function spin1() {
 		round++;
-		let slotTile = document.querySelector("#slot1");
+		const slotTile = document.querySelector("#slot1");
 		if (slotTile.className === "crying-face") {
 			slotTile.className = "love-heart";
 		} else if (slotTile.className === "love-heart") {
 			slotTile.className = "crying-face";
 		}
 		if (round >= maxSpinSlot1) {
-		clearInterval(slot1);
+			clearInterval(slot1);
 		}
 	}
 
 	function spin2() {
 		round++;
-		let slotTile = document.querySelector("#slot2");
+		const slotTile = document.querySelector("#slot2");
 		if (slotTile.className === "crying-face") {
 			slotTile.className = "love-heart";
 		} else if (slotTile.className === "love-heart") {
@@ -49,7 +54,7 @@ function spinCards() {
 
 	function spin3() {
 		round++;
-		let slotTile = document.querySelector("#slot3");
+		const slotTile = document.querySelector("#slot3");
 		if (slotTile.className === "crying-face") {
 			slotTile.className = "love-heart";
 		} else if (slotTile.className === "love-heart") {
@@ -63,27 +68,25 @@ function spinCards() {
 }
 
 function checkSpinResult(){
-	let card1 = document.querySelector("#slot1").className;
-	let card2 = document.querySelector("#slot2").className;
-	let card3 = document.querySelector("#slot3").className;
+	const card1 = document.querySelector("#slot1").className;
+	const card2 = document.querySelector("#slot2").className;
+	const card3 = document.querySelector("#slot3").className;
 	
 	if (card1 === card2 && card2 === card3) {
 		if (card1 === "love-heart") {
-			status.textContent = "YOU ARE LOVED!";
+			STATUS.textContent = WIN_TEXT;
 			heartRainfall('heart-icon');
 			playAudio('/static/AUDIO/Loves_You.mp3');
 		} else {
-		status.textContent = "LOOSER!";
-		heartRainfall('broken-heart-icon');
-			status.textContent = "LOOSER!";
-			playAudio('/static/AUDIO/Hello_darkness.mp3');
+			STATUS.textContent = LOOSE_TEXT;
+			heartRainfall('broken-heart-icon');
+			playAudio('/static/AUDIO/The_Sound_of_Silence.mp3');
 		}
 	}else {
-		status.textContent = "LOOSER!";
+		STATUS.textContent = LOOSE_TEXT;
 		heartRainfall('broken-heart-icon');
-		status.textContent = "LOOSER!";
-		playAudio('/static/AUDIO/Hello_darkness.mp3');
+		playAudio('/static/AUDIO/The_Sound_of_Silence.mp3');
 	}
-	let spinButton = document.querySelector('#spin-button');
+	const spinButton = document.querySelector('#spin-button');
 	spinButton.removeEventListener('click', spinCards);
 }
