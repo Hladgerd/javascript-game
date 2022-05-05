@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .flower-container {
     display: block;
     margin: 15%;
@@ -195,10 +196,9 @@ svg {
 /*slot machine*/
 main{
     border-radius: 5px;
-    background-color: #EF5350;
-    margin-top: 30px;
+    background-color: #ec6c8a;
+    margin-top: 10%;
     padding: 20px 15px;
-    margin-left: calc((100% - 580px) / 2);
     width: 550px;
 }
 section{
@@ -211,7 +211,7 @@ section{
     color: #FFFFFF;
 }
 #status{
-    background-color: #37474F;
+    background-color: #8f0a22;
     font-size: 25px;
 }
 #Slots{
@@ -219,24 +219,22 @@ section{
     background-color: #FAFAFA;
 }
 #spin-button{
-    background-color: #AB47BC;
+    background-color: #91283b;
     font-size: 25px;
 }
 #spin-button:hover{
-    background-color: #BA68C8;
+    background-color: #c86868;
 }
 #slot1, #slot2, #slot3{
     display: inline-block;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 8px;
     background-size: 150px;
     width: 150px;
-    height: 150px;
+    height: 156px;
 }
 .love-heart{
-    background-image: url("/static/IMAGES/heart.png");
+    background-image: url("/static/IMAGES/heart_spin.gif");
 }
 .crying-face{
-    background-image: url("/static/IMAGES/broken_heart.png");
+    background-image: url("/static/IMAGES/crying_face_spin.gif");
 }
