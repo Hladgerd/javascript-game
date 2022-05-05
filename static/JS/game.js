@@ -1,4 +1,6 @@
 import { initSlotMachine } from "./slot.js";
+import { heartRainfall } from "./util.js";
+import { getRandomIntInclusive } from "./util.js";
 
 const FLOWER_SVG = document.querySelector('#flower');
 const LOVES_YOU_TEXT = document.querySelector('.loves-you-text');
@@ -137,13 +139,6 @@ let allPetals = [
           class="petal"></path>`
 ]
 
-
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
 function selectRandomPetals(min, max) {
     let randomNumber = getRandomIntInclusive(min, max);
     let shuffledPetals = allPetals.sort(() => 0.5 - Math.random());
@@ -191,25 +186,6 @@ function changeLoveText() {
     }
 }
 
-function heartRainfall(cl) {
-    document.addEventListener('mousemove', function (e){
-        let body = document.querySelector('body');
-        let heart = document.createElement('span');
-        heart.classList.add(cl)
-        let x = e.offsetX;
-        let y = e.offsetY;
-        heart.style.left = x+'px';
-        heart.style.top = y+'px';
-        let size = Math.random() * 100;
-        heart.style.width = 45+size+'px';
-        heart.style.height = 25+size+'px';
-        body.appendChild(heart);
-
-        setTimeout(function (){
-            heart.remove();
-        },2000);
-    })
-}
 
 function hideLoveBoosterIcon() {
     let icon = document.getElementById('love-booster-btn');
