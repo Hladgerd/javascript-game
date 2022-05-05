@@ -34,8 +34,7 @@ body {
  .main-header {
      text-align: center;
      margin-top: 1rem;
-     margin-bottom: 1rem;
-     font-size: 350%;
+     font-size: 300%;
  }
 
  .loves-you-text {
@@ -197,7 +196,7 @@ svg {
 main{
     border-radius: 5px;
     background-color: #ec6c8a;
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 20px 15px;
     width: 550px;
 }
