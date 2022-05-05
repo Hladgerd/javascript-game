@@ -191,3 +191,52 @@ svg {
         filter: hue-rotate(720deg);
     }
 }
+
+/*slot machine*/
+main{
+    border-radius: 5px;
+    background-color: #EF5350;
+    margin-top: 30px;
+    padding: 20px 15px;
+    margin-left: calc((100% - 580px) / 2);
+    width: 550px;
+}
+section{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#status{
+    background-color: #37474F;
+    font-size: 25px;
+}
+#Slots{
+    border-radius: 15px;
+    background-color: #FAFAFA;
+}
+#spin-button{
+    background-color: #AB47BC;
+    font-size: 25px;
+}
+#spin-button:hover{
+    background-color: #BA68C8;
+}
+#slot1, #slot2, #slot3{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-size: 150px;
+    width: 150px;
+    height: 150px;
+}
+.love-heart{
+    background-image: url("/static/IMAGES/heart.png");
+}
+.crying-face{
+    background-image: url("/static/IMAGES/broken_heart.png");
+}
