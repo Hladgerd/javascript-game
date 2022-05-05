@@ -5,8 +5,7 @@ let status = document.querySelector('#status');
 
 export function initSlotMachine() {
 	const spinButton = document.querySelector('#spin-button');
-	console.log(spinButton);
-	spinButton.addEventListener('click', spinCards());
+	spinButton.addEventListener('click', spinCards);
 }
 
 function randomInt(min, max){
