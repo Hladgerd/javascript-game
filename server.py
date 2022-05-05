@@ -21,7 +21,8 @@ def flower_screen():
 
 @app.route('/booster')
 def booster_screen():
-    return render_template('booster.html')
+    crush = session['crush']
+    return render_template('booster.html', crush=crush)
 
 
 @app.route('/restart')
