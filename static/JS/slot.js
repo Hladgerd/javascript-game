@@ -1,23 +1,19 @@
-/*let spin = new Audio("JavascriptSlotMachine/res/sounds/Do-You-Love-Me.mp3");
-let win = new Audio("JavascriptSlotMachine/res/sounds/Loves_You.mp3");
-let lose = new Audio("JavascriptSlotMachine/res/sounds/Loves_you_not.mp3");*/
-let status = document.querySelector('#status');
+import { heartRainfall } from "./util.js";
+import { getRandomIntInclusive } from "./util.js";
 
+let status = document.querySelector('#status');
 export function initSlotMachine() {
 	const spinButton = document.querySelector('#spin-button');
 	spinButton.addEventListener('click', spinCards);
 }
 
-function randomInt(min, max){
-	return Math.floor((Math.random() * (max-min+1)) + min);
-}
 
 function spinCards() {
 	status.textContent = "SPINNING";
 
-	let maxSpinSlot1 = randomInt(10, 15);
-	let maxSpinSlot2 = randomInt(16, 20);
-	let maxSpinSlot3 = randomInt(21, 25);
+	let maxSpinSlot1 = getRandomIntInclusive(10, 15);
+	let maxSpinSlot2 = getRandomIntInclusive(16, 20);
+	let maxSpinSlot3 = getRandomIntInclusive(21, 25);
 
 	let round = 0;
 
@@ -74,10 +70,15 @@ function checkSpinResult(){
 	if (card1 === card2 && card2 === card3) {
 		if (card1 === "love-heart") {
 			status.textContent = "YOU ARE LOVED!";
+			heartRainfall('heart-icon');
 		} else {
-		status.textContent = "LOOSER!"
+		status.textContent = "LOOSER!";
+		heartRainfall('broken-heart-icon');
 		}
 	}else {
-		status.textContent = "LOOSER!"
+		status.textContent = "LOOSER!";
+		heartRainfall('broken-heart-icon');
 	}
+	let spinButton = document.querySelector('#spin-button');
+	spinButton.removeEventListener('click', spinCards);
 }
