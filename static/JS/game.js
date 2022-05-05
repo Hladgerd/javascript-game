@@ -166,11 +166,11 @@ function deletePetal() {
                    hideLoveBoosterIcon();
                    if (LOVES_YOU_TEXT.textContent === LOVES_YOU) {
                        heartRainfall('heart-icon');
-                       playAudio('static/AUDIO/Loves_You.mp3');
+                       playAudio('/static/AUDIO/Loves_You.mp3');
                    }
                    else if (LOVES_YOU_TEXT.textContent === LOVES_YOU_NOT) {
                        heartRainfall('broken-heart-icon');
-                       playAudio('static/AUDIO/Hello_darkness.mp3');
+                       playAudio('/static/AUDIO/Hello_darkness.mp3');
                    }
                }
            }

@@ -8,7 +8,6 @@ export function initSlotMachine() {
 	spinButton.addEventListener('click', spinCards);
 }
 
-
 function spinCards() {
 	status.textContent = "SPINNING";
 
@@ -72,18 +71,18 @@ function checkSpinResult(){
 		if (card1 === "love-heart") {
 			status.textContent = "YOU ARE LOVED!";
 			heartRainfall('heart-icon');
-			playAudio('static/AUDIO/Loves_You.mp3');
+			playAudio('/static/AUDIO/Loves_You.mp3');
 		} else {
 		status.textContent = "LOOSER!";
 		heartRainfall('broken-heart-icon');
 			status.textContent = "LOOSER!";
-			playAudio('static/AUDIO/Loves_you_not.mp3');
+			playAudio('/static/AUDIO/Hello_darkness.mp3');
 		}
 	}else {
 		status.textContent = "LOOSER!";
 		heartRainfall('broken-heart-icon');
 		status.textContent = "LOOSER!";
-		playAudio('static/AUDIO/Loves_you_not.mp3');
+		playAudio('/static/AUDIO/Hello_darkness.mp3');
 	}
 	let spinButton = document.querySelector('#spin-button');
 	spinButton.removeEventListener('click', spinCards);
