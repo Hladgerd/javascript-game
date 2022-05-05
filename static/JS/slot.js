@@ -1,5 +1,6 @@
 import { heartRainfall } from "./util.js";
 import { getRandomIntInclusive } from "./util.js";
+import { playAudio } from "./util.js";
 
 let status = document.querySelector('#status');
 export function initSlotMachine() {
@@ -71,13 +72,18 @@ function checkSpinResult(){
 		if (card1 === "love-heart") {
 			status.textContent = "YOU ARE LOVED!";
 			heartRainfall('heart-icon');
+			playAudio('static/AUDIO/Loves_You.mp3');
 		} else {
 		status.textContent = "LOOSER!";
 		heartRainfall('broken-heart-icon');
+			status.textContent = "LOOSER!";
+			playAudio('static/AUDIO/Loves_you_not.mp3');
 		}
 	}else {
 		status.textContent = "LOOSER!";
 		heartRainfall('broken-heart-icon');
+		status.textContent = "LOOSER!";
+		playAudio('static/AUDIO/Loves_you_not.mp3');
 	}
 	let spinButton = document.querySelector('#spin-button');
 	spinButton.removeEventListener('click', spinCards);

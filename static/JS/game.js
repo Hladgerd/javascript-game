@@ -1,6 +1,7 @@
 import { initSlotMachine } from "./slot.js";
 import { heartRainfall } from "./util.js";
 import { getRandomIntInclusive } from "./util.js";
+import { playAudio } from "./util.js";
 
 const FLOWER_SVG = document.querySelector('#flower');
 const LOVES_YOU_TEXT = document.querySelector('.loves-you-text');
@@ -165,11 +166,11 @@ function deletePetal() {
                    hideLoveBoosterIcon();
                    if (LOVES_YOU_TEXT.textContent === LOVES_YOU) {
                        heartRainfall('heart-icon');
-                       playAudio('/static/AUDIO/Loves_You.mp3');
+                       playAudio('static/AUDIO/Loves_You.mp3');
                    }
                    else if (LOVES_YOU_TEXT.textContent === LOVES_YOU_NOT) {
                        heartRainfall('broken-heart-icon');
-                       playAudio('static/AUDIO/Loves_you_not.mp3')
+                       playAudio('static/AUDIO/Hello_darkness.mp3');
                    }
                }
            }
@@ -190,11 +191,6 @@ function changeLoveText() {
 function hideLoveBoosterIcon() {
     let icon = document.getElementById('love-booster-btn');
     icon.style.display = 'none';
-}
-
-function playAudio(source) {
-    let song = new Audio(source);
-    song.play();
 }
 
 function initGame() {
