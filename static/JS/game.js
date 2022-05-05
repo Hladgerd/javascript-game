@@ -1,3 +1,5 @@
+import { initSlotMachine } from "./slot.js";
+
 const FLOWER_SVG = document.querySelector('#flower');
 const LOVES_YOU_TEXT = document.querySelector('.loves-you-text');
 const LOVES_YOU = 'LOVES YOU';
@@ -220,8 +222,12 @@ function playAudio(source) {
 }
 
 function initGame() {
-    placePetals();
-    deletePetal();
+    if (document.querySelector('#flower')) {
+        placePetals();
+        deletePetal();
+    }else if(document.querySelector('#spin-button')){
+        initSlotMachine();
+    }
 }
 
 initGame();
