@@ -30,12 +30,12 @@ Open localhost on port 5000 and play: [Localhost](http://localhost:5000/)
 
 ## How to play?
 
-- Enter your loved one's name and press :hearts: button.
-- Discover if you are loved in regular way:
-    - Rip out one by one the petals of the flower by clicking on them.
-    - The last petal will say, if you are loved or not.
-- Discover if you are loved in boosted way:
-    - Open **Love Booster** by clicking on the flaming heart
-    - Click on **Press here for analysis** in order to get immediate result.
-- **Be happy or cry!**
+- Enter your loved one's name and press :hearts: button
+- Discover if you are loved:
+    - Rip out one by one the petals of the flower by clicking on them
+    - The last petal will say, if you are loved or not
+- Boost your chances:
+    - **Before** you rip out all the petals, open **Love Booster** by clicking on the flaming heart
+    - Click on **Press here for analysis** in order to get immediate result
+- Be happy :revolving_hearts: or cry :broken_heart: !
 
