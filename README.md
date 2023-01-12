@@ -4,19 +4,29 @@ Have you ever been tormented by the doubt, if your crush loves you or not?
 
 Anguish no more!
 
-This **Javascript game** gives a definite answer, if you should continue to 
+This **Flask based Javascript game** gives a definite answer, if you should continue to 
 besiege her/him with your love, or it's time to decamp for greener pastures.
 
-## Where to play?
+***
+
+## How to start?
 
 ### Online
 
-Open [Loves you or not?](https://loves-you-or-not.herokuapp.com/) website
+Open the game's website and play:
+[Loves you or not?](https://loves-you-or-not.herokuapp.com/)
 
+### On your computer's localhost
+##### Prerequisite:
+- Docker installed
 
-### On your computer
+Run the public docker image:
+```
+docker run hladgerd/loves-or-not
+```
+Open localhost on port 5000 and play: [Localhost](http://localhost:5000/)
 
-Docker instructions
+***
 
 ## How to play?
 
