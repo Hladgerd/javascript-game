@@ -32,10 +32,10 @@ Open localhost on port 5000 and play: [Localhost](http://localhost:5000/)
 
 - Enter your loved one's name and press :hearts: button
 - Discover if you are loved:
-    - Rip out one by one the petals of the flower by clicking on them
-    - The last petal will say, if you are loved or not
+    - Rip out one by one the petals of the flower :hibiscus: by clicking on them
+    - The last petal will say, if you are loved :revolving_hearts: or not :broken_heart:
 - Boost your chances:
     - **Before** you rip out all the petals, open **Love Booster** by clicking on the flaming heart
     - Click on **Press here for analysis** in order to get immediate result
-- Be happy :revolving_hearts: or cry :broken_heart: !
+- Be happy :heart_eyes: or cry :cry: !
 
