@@ -14,11 +14,6 @@ def intro_screen():
     return render_template('index.html')
 
 
-@app.route('/flower')
-def flower_screen():
-    return render_template('flower.html')
-
-
 @app.route('/booster')
 def booster_screen():
     crush = session['crush']
