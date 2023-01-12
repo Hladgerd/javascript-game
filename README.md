@@ -20,7 +20,7 @@ Open the game's website and play:
 ##### Prerequisite:
 - Docker installed
 
-Run the public docker image:
+Run the public docker image in your terminal:
 ```
 docker run hladgerd/loves-or-not
 ```
