@@ -16,7 +16,7 @@ besiege her/him with your love, or it's time to decamp for greener pastures.
 Open the game's website and play:
 [Loves you or not?](https://loves-you-or-not.herokuapp.com/)
 
-### On your computer's localhost
+### On your computer
 ##### Prerequisite:
 - Docker installed
 
@@ -24,7 +24,7 @@ Run the public docker image in your terminal:
 ```
 docker run hladgerd/loves-or-not
 ```
-Open localhost on port 5000 and play: [Localhost](http://localhost:5000/)
+Open docker host on port 5000 and play: [Host](http://172.17.0.2:5000)
 
 ***
 
