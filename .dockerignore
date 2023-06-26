@@ -19,5 +19,3 @@ coverage.xml
 .pytest_cache
 .hypothesis
 FlaskApp.wsgi
-Procfile
-runtime.txt
