@@ -14,7 +14,7 @@ besiege her/him with your love, or it's time to decamp for greener pastures.
 ### Online
 
 Open the game's website and play:
-[Loves you or not?](https://loves-you-or-not.herokuapp.com/)
+[Loves you or not?](https://hladgerd.eu.pythonanywhere.com/)
 
 ### On your computer
 ##### Prerequisite:
